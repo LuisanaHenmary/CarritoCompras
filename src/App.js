@@ -1,8 +1,8 @@
 
-function App() {
+const App = () => {
   return (
     <>
-     <p>Comenzando ...</p>
+      <p>Comenzando ...</p>
     </>
   );
 }
