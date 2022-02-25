@@ -1,8 +1,17 @@
+import styled from 'styled-components'
+import Layout from './components/Layout';
+
+const Parr = styled.p`
+  color:red;
+`
 
 const App = () => {
   return (
     <>
-      <p>Comenzando ...</p>
+      <Layout>
+        <Parr>Comenzando ...</Parr>
+      </Layout>
+
     </>
   );
 }
