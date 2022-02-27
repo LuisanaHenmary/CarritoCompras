@@ -8,10 +8,15 @@ justify-content:space-between;
 
 `
 
-const Products = ({products}) =>{
-    return(
+const Products = ({ products, addToCar }) => {
+    return (
         <Prod>
-            {products.map(pr=><Product key={pr.name} product={pr} />)}
+            {products.map(pr => <Product
+                key={pr.name}
+                product={pr}
+                event={addToCar}
+            />
+            )}
         </Prod>
     )
 }

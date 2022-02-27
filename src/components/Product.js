@@ -8,16 +8,28 @@ padding:10px 15px;
 border-radius:5px;
 `
 
+const Button = styled.button`
+    background-color:black;
+    color:white;
+    padding:15px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+`
+
 const Image = styled.img`
     width:100%;
 `
 
-const Product = ({ product }) => {
+const Product = ({ product,event}) => {
     return (
         <Card>
             <Image alt={product.name} src={product.img} />
             <h3>{product.name}</h3>
             <h3>{product.price} $</h3>
+            <Button onClick={()=>event }>
+                Agregar al carro
+            </Button>
         </Card>
     )
 }
