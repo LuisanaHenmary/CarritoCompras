@@ -27,7 +27,10 @@ const Product = ({ product,event}) => {
             <Image alt={product.name} src={product.img} />
             <h3>{product.name}</h3>
             <h3>{product.price} $</h3>
-            <Button onClick={()=>event }>
+            <Button 
+                onClick={event}
+                name = {product.name}
+            >
                 Agregar al carro
             </Button>
         </Card>
