@@ -5,15 +5,14 @@ const LayoutBase = styled.div`
     color:black;
     align-items: center;
     display: flex;
-    flexDirection:column;
-    
+    flex-direction:column;    
 ` 
 
 const Container = styled.div`
     width:1200px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding:80px;
 `
-
 const Layout = ({children}) =>{
     return(
         <LayoutBase>

@@ -17,7 +17,7 @@ const [carBuy,setStock] = useCar({ car: [], carDisplay: false, })
 
   return (
     <>
-      <NavBar />
+      <NavBar carBuy={carBuy} />
       <Layout>
         <Products
           addToCar={setStock}

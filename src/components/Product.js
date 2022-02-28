@@ -6,6 +6,7 @@ box-shadow:0 5px 5px rgb(0,0,0,0.1);
 width:30%;
 padding:10px 15px;
 border-radius:5px;
+margin:20px;
 `
 
 const Button = styled.button`
