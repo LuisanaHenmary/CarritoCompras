@@ -11,13 +11,17 @@ const App = () => {
     { name: 'arvejas', price: 500, img: "/productos/arvejas.jpg" },
   ]
 
-const [carBuy,setStock] = useCar({ car: [], carDisplay: false, })
+const [carBuy,setStock,display,setBool] = useCar({ car: [], carDisplay: false, })
 
   console.log(carBuy)
 
   return (
     <>
-      <NavBar carBuy={carBuy} />
+      <NavBar
+      carBuy={carBuy}
+      displayCar={display}
+      setDisplay={setBool}
+      />
       <Layout>
         <Products
           addToCar={setStock}

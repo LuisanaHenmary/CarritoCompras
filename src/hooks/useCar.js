@@ -3,7 +3,7 @@ import { useState } from "react";
 const useCar = (initial_state) =>{
 
     const [carBuy,setCar] = useState(initial_state.car)
-  //  const [display,setDisplay] = useState(initial_state.carDisplay)
+   const [display,setDisplay] = useState(initial_state.carDisplay)
   
     const setStock = (product) =>{
 
@@ -26,14 +26,12 @@ const useCar = (initial_state) =>{
         setCar(newcar)
 
     }
-/*
+
     const setBool = () =>{
+      setDisplay(!display)
+    }
 
-    }*/
-
-
-
-    return [carBuy,setStock]
+    return [carBuy,setStock,display,setBool]
 
 }
 

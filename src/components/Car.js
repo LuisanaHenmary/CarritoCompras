@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import CarDetails from "./CarDetails"
 
 const Bubble = styled.span`
     position:relative;
@@ -24,8 +25,8 @@ const BubbleAlert = styled.span`
     width:15px;
 
 `
-//,display,changeDisplay
-const Car = ({car}) =>{
+
+const Car = ({car,display,changeDisplay}) =>{
     const cantidad = car.reduce((acc,el) => acc + el.cantidad,0)
     
     const getNumber=()=>{
@@ -36,11 +37,12 @@ const Car = ({car}) =>{
     return(
         <div>
             <Bubble>
-            {cantidad !== 0 ? <BubbleAlert>{getNumber()}</BubbleAlert>:null}
+              {cantidad !== 0 ? <BubbleAlert>{getNumber()}</BubbleAlert>:null}
             </Bubble>
-            <Button>
+            <Button type="button" onClick={changeDisplay}>
                car
             </Button>
+            {display?<CarDetails car={car} />:null}
         </div>
 
     )

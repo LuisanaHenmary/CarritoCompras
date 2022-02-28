@@ -10,7 +10,6 @@ const Nav = styled.nav`
     justify-content:space-between;
     position:relative;
     padding:0 50px;
-    margin-bottom:20px ;
     box-shadow:0 2px 3px rgb(0,0,0,0.1);
 
 `
@@ -22,12 +21,16 @@ const Logo = styled.div`
     padding:10px;
     border-radius:300px;
 `
-//,displayCar,setDisplay
-const NavBar = ({carBuy}) =>{
-    return(
+
+const NavBar = ({ carBuy, displayCar, setDisplay }) => {
+    return (
         <Nav>
             <Logo >🍅Shop</Logo>
-            <Car car={carBuy} />
+            <Car
+                car={carBuy}
+                display={displayCar}
+                changeDisplay={setDisplay}
+            />
         </Nav>
     )
 }

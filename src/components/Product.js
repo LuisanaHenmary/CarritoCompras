@@ -29,6 +29,7 @@ const Product = ({ product,event}) => {
             <h3>{product.name}</h3>
             <h3>{product.price} $</h3>
             <Button 
+                type="button"
                 onClick={event}
                 name = {product.name}
             >
