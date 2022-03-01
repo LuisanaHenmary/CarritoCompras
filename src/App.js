@@ -13,10 +13,8 @@ const App = () => {
 
 const [carBuy,setStock,display,setBool] = useCar({ car: [], carDisplay: false, })
 
-  console.log(carBuy)
-
   return (
-    <>
+    <div>
       <NavBar
       carBuy={carBuy}
       displayCar={display}
@@ -29,7 +27,7 @@ const [carBuy,setStock,display,setBool] = useCar({ car: [], carDisplay: false, }
         />
       </Layout>
 
-    </>
+    </div>
   );
 }
 

@@ -1,37 +1,37 @@
 import { useState } from "react";
 
-const useCar = (initial_state) =>{
+const useCar = (initial_state) => {
 
-    const [carBuy,setCar] = useState(initial_state.car)
-   const [display,setDisplay] = useState(initial_state.carDisplay)
-  
-    const setStock = (product) =>{
+  const [carBuy, setCar] = useState(initial_state.car)
+  const [display, setDisplay] = useState(initial_state.carDisplay)
 
-        const nam = product.target.name
-        let newcar;
+  const setStock = (product) => {
 
-        if(carBuy.find(x=>x.producto===nam)){
-             newcar = carBuy.map(x=>x.producto === nam
-				?({
+    const nam = product.name
+    let newcar;
 
-					...x,
-					cantidad:x.cantidad+1
-				})
-				:x)
-            
-        }else{
-             newcar = carBuy.concat({producto:nam, cantidad:1,})
-        }
+    if (carBuy.find(x => x.name === nam)) {
+      newcar = carBuy.map(x => x.name === nam
+        ? ({
 
-        setCar(newcar)
+          ...x,
+          cantidad: x.cantidad + 1
+        })
+        : x)
 
+    } else {
+      newcar = carBuy.concat({ ...product,cantidad:1, })
     }
 
-    const setBool = () =>{
-      setDisplay(!display)
-    }
+    setCar(newcar)
 
-    return [carBuy,setStock,display,setBool]
+  }
+
+  const setBool = () => {
+    setDisplay(!display)
+  }
+
+  return [carBuy, setStock, display, setBool]
 
 }
 

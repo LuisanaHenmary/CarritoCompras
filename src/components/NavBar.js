@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Car from "./Car"
 
 const Nav = styled.nav`
-    background-color:blue;
+    background-color:black;
     display:flex;
     flex-direction:row;
     align-items:center;
